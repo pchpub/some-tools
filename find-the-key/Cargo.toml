@@ -1,0 +1,23 @@
+[package]
+name = "find-the-key"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust-crypto = "0.2.36"
+rand = "0.8.5"
+
+[profile.fast]
+inherits = "release"
+opt-level = 3 
+debug = false 
+# split-debuginfo = 'off' 
+debug-assertions = false 
+overflow-checks = false 
+lto = true 
+panic = 'unwind' 
+incremental = false 
+codegen-units = 1 
+rpath = false
